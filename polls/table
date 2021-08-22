@@ -1,0 +1,46 @@
+CREATE TABLE users(
+    s_no INT(11) NOT NULL AUTO_INCREMENT PRIMERY KEY,
+    username VARCHAR(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    useremail varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    pswrd varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+   // Cpswrd varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    dt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+
+CREATE TABLE teams(
+
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMERY KEY,
+    teamname varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    M_id INT(250) NOT NULL,
+    in_id INT(250) NOT NULL,
+    dt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+
+CREATE TABLE poll_data (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    desc text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    getId INT(250) NOT NULL,
+    poll_id INT(250) NOT NULL,
+    dt4 DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+CREATE TABLE invited_users (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    in_user  varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    team_id INT(250) NOT NULL,
+    users_in_id INT(250) NOT NULL,
+    i_dt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+)
+
+CREATE TABLE add_ans (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    ans_id INT(22) NOT NULL,
+    ans text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    vote INT(22) NOT NULL,
+)
+
+
+
+
+
+
